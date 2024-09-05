@@ -4,7 +4,7 @@ const horasMinSeg = document.getElementById("hora-min-seg");
 const arrayWeekDay = ["Domingo","Segunda-feira", "Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
 const btnFecharModal = document.getElementById("btn-fechar-dialog")
 const btnRegistrarPonto = document.getElementById("btn-registrar-ponto");
-
+const dialogPonto = document.getElementById("dialog-ponto")
 
 
 btnRegistrarPonto.addEventListener("click", function(){
