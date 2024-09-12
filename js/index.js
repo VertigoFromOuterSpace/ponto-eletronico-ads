@@ -154,26 +154,26 @@ function modalHoraCompleta(){ // mostra o horário no modal
     horasMinutosSegundosMenos10 = "0" + dataHora + ":" + "0" + dataMinutos + ":" + "0" + dataSegundos;
 
 
-    if (dataHora < 10){
-        return horasMenos10
-    }
-    else if (dataMinutos < 10){
-        return minutosMenos10
-    }
-    else if (dataSegundos < 10){
-        return segundosMenos10
-    }
-    else if (dataHora < 10 && dataMinutos < 10){
-        return horasMinutosMenos10
-    }
-    else if (dataHora < 10 && dataSegundos < 10){
-        return horasSegundosMenos10
+    if (dataHora < 10 && dataMinutos < 10 && dataSegundos < 10){
+        return horasMinutosSegundosMenos10
     }
     else if (dataMinutos < 10 && dataSegundos < 10){
         return minutosSegundosMenos10
     }
-    else if (dataHora < 10 && dataMinutos < 10 && dataSegundos < 10){
-        return horasMinutosSegundosMenos10
+    else if (dataHora < 10 && dataSegundos < 10){
+        return horasSegundosMenos10
+    }
+    else if (dataHora < 10 && dataMinutos < 10){
+        return horasMinutosMenos10
+    }
+    else if (dataSegundos < 10){
+        return segundosMenos10
+    }
+    else if (dataMinutos < 10){
+        return minutosMenos10
+    }
+    else if (dataHora < 10){
+        return horasMenos10
     }
     else{
         return horarioMais10
