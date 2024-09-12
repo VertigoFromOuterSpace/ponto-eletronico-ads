@@ -10,7 +10,15 @@ const dialogPonto = document.getElementById("dialog-ponto"); // constante do mod
 const modalDiaMesAno = document.getElementById("modal-dia-mes-ano"); // constante do dia no mês no modal
 const modalHorasMinSeg = document.getElementById("modal-hora-min-seg"); // constante do horário no modal
 
+const arrayPontoAnterior = ["Entrada","Intervalo","Volta Intervalo", "Saída"];
+const verificaPontoAnterior = arrayPontoAnterior[0];
 
+
+navigator.geolocation.getCurrentPosition((position) => {
+    console.log(position);
+    console.log(position.coords.latitude);
+    console.log(position.coords.longitude)
+});
 
 btnRegistrarPonto.addEventListener("click", function(){ // ler o botão para mostrar o modal
     dialogPonto.showModal();
@@ -21,6 +29,36 @@ btnFecharModal.addEventListener("click", function() { // ler o botão para fecha
 })
 
 
+const btnDialogRegistrarPonto = document.getElementById("btn-dialog-registrar-ponto");
+btnDialogRegistrarPonto.addEventListener("click", () => {
+
+    let data = dataCompleta();
+    let hora = horaCompleta();
+    let tipoPonto = document.getElementById("select-tipos-ponto").value;
+
+    
+    let somaPontoAnterior = verificaPontoAnterior + 1;
+
+    let ponto = {
+        "data":data,
+        "hora":hora,
+        "tipo":tipoPonto,
+        "id": 1,
+        "proxPonto":somaPontoAnterior
+    }
+
+    console.log(ponto)
+
+});
+
+
+
+
+
+
+
+
+
 
 function daySemana(){ // usa o array para mostrar o dia da semana
     const date = new Date();
@@ -29,29 +67,7 @@ function daySemana(){ // usa o array para mostrar o dia da semana
 
 function dataCompleta(){ // função de mostrar a data completa e coloca um 0 à esquerda quando necessário
     const date = new Date();
-
-    const diaData = date.getDate();
-    const MesData = date.getMonth() + 1;
-
-
-    dataMais10 = diaData + "/" + MesData + "/" + date.getFullYear(); //data padrão quando dia e mês for mais de 10
-
-    dataDiaMesMenos10 = "0" + diaData + "/" + "0" + MesData + "/" + date.getFullYear();
-    dataDiaMenos10 = "0" + diaData + "/" + MesData + "/" + date.getFullYear();
-    dataMesMenos10 = diaData + "/" + "0" + MesData + "/" + date.getFullYear();
-    
-    if (diaData < 10 && MesData < 10){
-        return dataDiaMesMenos10;
-    }
-    else if (date.getMonth() < 10){
-        return dataMesMenos10;
-    }
-    else if (diaData < 10){
-        return dataDiaMenos10;
-    }
-    else{
-        return dataMais10;
-    }
+    return String(date.getDate()).padStart(2,"0") + "/" + String(date.getMonth() + 1).padStart(2,"0") + "/" + date.getFullYear()
 }
 
 
