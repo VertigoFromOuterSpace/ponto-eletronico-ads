@@ -20,3 +20,10 @@ dialog {
     font-size: 24px;
     cursor: pointer;
 }
+
+#text-tela-confirmacao{
+    text-align: center;
+    color: #ccc;
+    background-color: #008000;
+    opacity: 0%;
+}

@@ -1,3 +1,8 @@
+//TO-DO
+//Organizar código
+// ajeitar o div da confirmacao e fazê-lo aparecer
+// garantir que o código persista para mostrar o histórico
+
 const diaSemana = document.getElementById("dia-semana"); // constante do dia da semana por extenso
 const diaMesAno = document.getElementById("dia-mes-ano"); // constante do dia no mês
 const horasMinSeg = document.getElementById("hora-min-seg"); // constante do horário
@@ -10,8 +15,17 @@ const dialogPonto = document.getElementById("dialog-ponto"); // constante do mod
 const modalDiaMesAno = document.getElementById("modal-dia-mes-ano"); // constante do dia no mês no modal
 const modalHorasMinSeg = document.getElementById("modal-hora-min-seg"); // constante do horário no modal
 
-const arrayPontoAnterior = ["Entrada","Intervalo","Volta Intervalo", "Saída"];
-const verificaPontoAnterior = arrayPontoAnterior[0];
+const confirmacaoModal = document.getElementById("tela-confirmacao");
+
+
+
+let proxPonto = {
+    "Entrada":"Intervalo",
+    "Intervalo":"Volta-Intervalo",
+    "Volta-Intervalo":"Saida",
+    "Saida":"Entrada"
+}
+
 
 
 navigator.geolocation.getCurrentPosition((position) => {
@@ -20,13 +34,20 @@ navigator.geolocation.getCurrentPosition((position) => {
     console.log(position.coords.longitude)
 });
 
+
 btnRegistrarPonto.addEventListener("click", function(){ // ler o botão para mostrar o modal
+    let dialogSelect = document.getElementById("select-tipos-ponto");
+    let tipoUltimoPonto = localStorage.getItem("tipoUltimoPonto");
+
+    dialogSelect.value = proxPonto[tipoUltimoPonto];
+
     dialogPonto.showModal();
 } );
 
 btnFecharModal.addEventListener("click", function() { // ler o botão para fechar o modal
     dialogPonto.close();
 })
+
 
 
 const btnDialogRegistrarPonto = document.getElementById("btn-dialog-registrar-ponto");
@@ -36,19 +57,21 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
     let hora = horaCompleta();
     let tipoPonto = document.getElementById("select-tipos-ponto").value;
 
-    
-    let somaPontoAnterior = verificaPontoAnterior + 1;
-
     let ponto = {
         "data":data,
         "hora":hora,
         "tipo":tipoPonto,
-        "id": 1,
-        "proxPonto":somaPontoAnterior
+        "id": 1
     }
 
-    console.log(ponto)
+    
+    
 
+    localStorage.setItem("registro", JSON.stringify(ponto));
+    localStorage.setItem("tipoUltimoPonto", tipoPonto);
+
+    console.log(localStorage)
+    dialogPonto.close();
 });
 
 
