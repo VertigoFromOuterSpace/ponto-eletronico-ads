@@ -21,9 +21,21 @@ dialog {
     cursor: pointer;
 }
 
-#text-tela-confirmacao{
+.tela-confirmacao {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    color: #ccc;
+    color: #fff;
     background-color: #008000;
-    opacity: 0%;
+    opacity: 0;
+    transition: opacity 1s;
+    pointer-events: none;
+    z-index: 1000;
+    width: 100%;
+}
+
+.tela-confirmacao.visivel {
+    opacity: 1;
 }
