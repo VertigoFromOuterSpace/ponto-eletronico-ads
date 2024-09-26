@@ -6,7 +6,8 @@
 const btnFecharModal = document.getElementById("btn-fechar-dialog"); // constante do botão de fechar o modal
 const btnRegistrarPonto = document.getElementById("btn-registrar-ponto"); // constante do botão de abrir o modal
 const dialogPonto = document.getElementById("dialog-ponto"); // constante do modal
-const confirmacaoModal = document.getElementById("tela-confirmacao");
+const divAlerta = document.getElementById("div-alerta");
+
 
 let proxPonto = {
     "Entrada":"Intervalo",
@@ -53,12 +54,20 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
         "id": 1
     }
 
-    confirmacaoModal.classList.remove("tela-confirmacao")
-    confirmacaoModal.classList.add("tela-confirmacao")
+    
 
     localStorage.setItem("registro", JSON.stringify(ponto));
     localStorage.setItem("tipoUltimoPonto", tipoPonto);
 
+
     console.log(localStorage)
     dialogPonto.close();
+
+    divAlerta.classList.remove("hidden");
+    divAlerta.classList.add("show");
+
+    setTimeout(() => {
+        divAlerta.classList.remove("show");
+        divAlerta.classList.add("hidden");
+    }, 5000);
 });

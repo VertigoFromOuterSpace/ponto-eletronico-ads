@@ -36,25 +36,6 @@ dialog {
     color: white;
 }
 
-.tela-confirmacao {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #fff;
-    background-color: #008000;
-    opacity: 0;
-    transition: opacity 1s;
-    pointer-events: none;
-    z-index: 1000;
-    width: 100%;
-}
-
-.tela-confirmacao.visivel {
-    opacity: 1;
-}
-
 .data-hora p{
     font-size: 30px;
     font-family: "Jacquarda Bastarda 9", serif;
@@ -114,4 +95,21 @@ dialog {
     font-size: 30px;
     font-family: "Jacquarda Bastarda 9", serif;
     font-weight: 400;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
+}
+
+#div-alerta{
+    background-color: green;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
 }
