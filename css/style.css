@@ -60,6 +60,7 @@ dialog {
     font-size: 30px;
     font-family: "Jacquarda Bastarda 9", serif;
     font-weight: 400;
+    transition: all 0.5s ease-out;
 }
 
 #dia-semana{
@@ -99,6 +100,8 @@ dialog {
 
 .hidden{
     opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
 }
 
 .show{
