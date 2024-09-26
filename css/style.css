@@ -39,3 +39,20 @@ dialog {
 .tela-confirmacao.visivel {
     opacity: 1;
 }
+
+.data-hora p{
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#div-btn-registrar-ponto{
+    text-align: center;
+}
+
+#btn-registrar-ponto{
+    padding: 30px;
+    border-radius: 100px;
+    width: fit-content;
+}
