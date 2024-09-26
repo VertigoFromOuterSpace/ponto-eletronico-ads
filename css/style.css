@@ -1,14 +1,25 @@
+body{
+    background-image: url(../background.jpg);
+    background-size: cover;
+}
+
 .data-hora{
     text-align: center;
 }
 
 dialog {
+    text-align: center;
     position: relative;
     padding: 20px;
     width: 300px;
     border: none;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    background-color: #201F1F;
+    color: white;
 }
 
 .fechar-modal {
@@ -19,6 +30,10 @@ dialog {
     border: none;
     font-size: 24px;
     cursor: pointer;
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    color: white;
 }
 
 .tela-confirmacao {
@@ -45,14 +60,58 @@ dialog {
     font-family: "Jacquarda Bastarda 9", serif;
     font-weight: 400;
     font-style: normal;
+    color: white;
 }
 
 #div-btn-registrar-ponto{
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 #btn-registrar-ponto{
+    opacity: 90%;
     padding: 30px;
-    border-radius: 100px;
-    width: fit-content;
+    border: 1px;
+    border-radius: 50px;
+    background-color: #A79C7A;
+    color: white;
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+}
+
+#dia-semana{
+    font-size: 20px;
+}
+#hora-min-seg{
+    padding-top: 10%;
+    font-size: 50px;
+}
+
+#select-tipos-ponto{
+    font-size: 20px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    color: #201F1F;
+}
+
+#btn-dialog-registrar-ponto{
+    color: #A79D7B;
+    font-size: 20px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    background-color: #A12433;
+}
+
+#btn-registrar-ponto:hover{
+    opacity: 90%;
+    padding: 30px;
+    border: 1px;
+    border-radius: 50px;
+    background-color: #1B1C1C;
+    color: #A79D7B;
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
 }

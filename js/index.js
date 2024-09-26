@@ -53,8 +53,8 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
         "id": 1
     }
 
-    
-    
+    confirmacaoModal.classList.remove("tela-confirmacao")
+    confirmacaoModal.classList.add("tela-confirmacao")
 
     localStorage.setItem("registro", JSON.stringify(ponto));
     localStorage.setItem("tipoUltimoPonto", tipoPonto);
