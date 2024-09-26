@@ -115,4 +115,7 @@ dialog {
     position: fixed;
     right: 15px;
     bottom: 15px;
+    font-size: 15px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
 }
