@@ -69,5 +69,5 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
     setTimeout(() => {
         divAlerta.classList.remove("show");
         divAlerta.classList.add("hidden");
-    }, 2000);
+    }, 1000);
 });
