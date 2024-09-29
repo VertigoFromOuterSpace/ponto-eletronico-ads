@@ -121,3 +121,13 @@ dialog {
     font-family: "Jacquarda Bastarda 9", serif;
     font-weight: 400;
 }
+
+a{
+    text-decoration: none;
+}
+
+#container-opcoes-detalhes{
+    text-align: center;
+    padding: 2vh;
+    color: white;
+}
