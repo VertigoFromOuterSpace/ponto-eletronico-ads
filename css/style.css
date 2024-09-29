@@ -1,8 +1,10 @@
-body{
+body {
     background-image: url(../background.jpg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* Centraliza a imagem */
+    background-size: cover; /* Ajusta o tamanho para cobrir a tela sem distorcer */
+    background-attachment: fixed;
 }
-
 .data-hora{
     text-align: center;
 }
