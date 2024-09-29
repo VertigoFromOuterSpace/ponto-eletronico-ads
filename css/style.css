@@ -111,12 +111,12 @@ dialog {
 }
 
 #div-alerta{
-    background-color: green;
-    color: white;
+    background-color: #171c1c;
+    color: #a69c7c;
     padding: 15px;
     position: fixed;
-    right: 15px;
-    bottom: 15px;
+    right: 10px;
+    bottom: 140px;
     font-size: 15px;
     font-family: "Jacquarda Bastarda 9", serif;
     font-weight: 400;
@@ -130,4 +130,12 @@ a{
     text-align: center;
     padding: 2vh;
     color: white;
+}
+
+#div-alerta{
+    text-align: right;
+}
+
+#btn-fechar-div-alerta{
+    background-color: #ce0c0c;
 }

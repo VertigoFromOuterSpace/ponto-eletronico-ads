@@ -7,6 +7,7 @@ const btnFecharModal = document.getElementById("btn-fechar-dialog"); // constant
 const btnRegistrarPonto = document.getElementById("btn-registrar-ponto"); // constante do botão de abrir o modal
 const dialogPonto = document.getElementById("dialog-ponto"); // constante do modal
 const divAlerta = document.getElementById("div-alerta");
+const btnFecharDivAlerta = document.getElementById("btn-fechar-div-alerta");
 
 
 let proxPonto = {
@@ -32,12 +33,12 @@ btnRegistrarPonto.addEventListener("click", function(){ // ler o botão para mos
     dialogSelect.value = proxPonto[tipoUltimoPonto];
 
     dialogPonto.showModal();
-} );
+});
+
 
 btnFecharModal.addEventListener("click", function() { // ler o botão para fechar o modal
     dialogPonto.close();
-})
-
+});
 
 
 const btnDialogRegistrarPonto = document.getElementById("btn-dialog-registrar-ponto");
@@ -54,11 +55,8 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
         "id": 1
     }
 
-    
-
     localStorage.setItem("registro", JSON.stringify(ponto));
     localStorage.setItem("tipoUltimoPonto", tipoPonto);
-
 
     console.log(localStorage)
     dialogPonto.close();
@@ -66,8 +64,15 @@ btnDialogRegistrarPonto.addEventListener("click", () => {
     divAlerta.classList.remove("hidden");
     divAlerta.classList.add("show");
 
+
+    btnFecharDivAlerta.addEventListener("click", function () {
+        divAlerta.classList.remove("show");
+        divAlerta.classList.add("hidden");
+    });
+
+
     setTimeout(() => {
         divAlerta.classList.remove("show");
         divAlerta.classList.add("hidden");
-    }, 1000);
+    }, 5000);
 });
