@@ -139,3 +139,83 @@ a{
 #btn-fechar-div-alerta{
     background-color: #ce0c0c;
 }
+
+#btn-historico-detalhes{
+    opacity: 100%;
+    padding: 10px;
+    border: 1px;
+    border-radius: 50px;
+    background-color: #A79C7A;
+    color: #3f3b28;
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    transition: all 0.5s ease-out;
+}
+
+#btn-historico-detalhes:hover{
+    opacity: 90%;
+    padding: 5px;
+    border: 1px;
+    border-radius: 50px;
+    font-size: 32px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+}
+
+.tres-pontinhos {
+    cursor: pointer;
+    float: right;
+    padding: 5px;
+}
+
+.menu-opcoes {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    /* Remover display: none aqui */
+}
+
+.menu-opcoes.hidden {
+    display: none; /* Controlar visibilidade apenas com essa classe */
+}
+
+.menu-opcoes button {
+    display: block;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu-opcoes button:hover {
+    background-color: #f0f0f0;
+}
+
+#lista-historico-pontos{
+    font-size: 20px;
+}
+
+#btn-opcoes{
+    opacity: 100%;
+    padding: 10px;
+    border: 1px;
+    border-radius: 50px;
+    background-color: #A79C7A;
+    color: #3f3b28;
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    transition: all 0.5s ease-out;
+}
+
+#btn-opcoes:hover{
+    opacity: 90%;
+    padding: 5px;
+    border: 1px;
+    border-radius: 50px;
+    font-size: 32px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+}

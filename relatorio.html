@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Marcações</title>
+    <link rel="stylesheet" href="css/relatorio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Relatório de Marcações</h1>
+
+    <div id="filtros-relatorio">
+        <label for="filtro-inicio">De:</label>
+        <input type="date" id="filtro-inicio">
+        <label for="filtro-fim">Até:</label>
+        <input type="date" id="filtro-fim">
+        <button id="btn-filtrar">Filtrar</button>
+    </div>
+    <br>
+
+    <div class="caixa-relatorio">
+        <ul id="lista-relatorio"></ul>
+    </div>
+    
+    <!-- Modal de Edição -->
+    <dialog id="dialog-editar-ponto">
+        <h2>Editar Ponto</h2>
+        <p>Data: <input type="date" id="input-data-edicao"></p>
+        <p>Hora: <input type="time" id="input-hora-edicao"></p>
+        <p>Tipo de Ponto:
+            <select id="select-tipo-edicao">
+                <option value="Entrada">Entrada</option>
+                <option value="Intervalo">Intervalo</option>
+                <option value="Volta-Intervalo">Volta Intervalo</option>
+                <option value="Saida">Saída</option>
+            </select>
+        </p>
+        <button id="btn-confirmar-edicao">Confirmar Edição</button>
+        <button id="btn-fechar-editar">Fechar</button>
+    </dialog>
+    
+
+    <script src="js/relatorio.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    background-image: url(../relaBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center center; /* Centraliza a imagem */
+    background-size: cover; /* Ajusta o tamanho para cobrir a tela sem distorcer */
+    background-attachment: fixed;
+    text-align: center;
+    color: #5a363a;
+    font-family: "Jacquarda Bastarda 9", serif;
+}
+h1{
+    font-size: 50px;
+}
+
+ul{
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #5a363a;
+}
+
+#dialog-editar-ponto{
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    width: 300px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 30px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    background-color: #5a363a;
+    color: #5a363a;
+}
+
+.caixa-relatorio {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background: linear-gradient(0deg, rgba(169, 89, 88, 0.9) 0%, rgba(238, 194, 152, 0.5) 100%);
+}
+
+.caixa-relatorio li {
+    opacity: 1;
+}
+
+
+#lista-relatorio {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#lista-relatorio li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#lista-relatorio li:last-child {
+    border-bottom: none;
+}
+

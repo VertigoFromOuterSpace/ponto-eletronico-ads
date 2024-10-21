@@ -33,16 +33,72 @@
         <button id="btn-registrar-ponto">Registrar ponto!</button>
     </div>
 
+        <!-- Botão para visualizar o histórico de pontos -->
     <div id="container-opcoes-detalhes">
-        <a id="botao-historico-detalhes">Historico</a>
+        <a id="btn-historico-detalhes">Histórico</a>
+        <a id="btn-opcoes">+Opções</a>
     </div>
 
-    
+    <dialog id="dialog-historico">
+        <h2>Histórico de Pontos</h2>
+        <ul id="lista-historico-pontos"></ul>
+        <button class="fechar-modal" id="btn-fechar-historico">X</button>
+    </dialog>
+
+    <dialog id="dialog-editar-ponto">
+        <h2>Editar Ponto</h2>
+        <p>Data: <input type="date" id="input-data-edicao"></p>
+        <p>Hora: <input type="time" id="input-hora-edicao"></p>
+        <p>Tipo de Ponto:
+            <select id="select-tipo-edicao">
+                <option value="Entrada">Entrada</option>
+                <option value="Intervalo">Intervalo</option>
+                <option value="Volta-Intervalo">Volta Intervalo</option>
+                <option value="Saida">Saída</option>
+            </select>
+        </p>
+        <button id="btn-confirmar-edicao">Confirmar Edição</button>
+        <button class="fechar-modal" id="btn-fechar-editar">X</button>
+    </dialog>
+
+    <dialog id="dialog-opcoes">
+        <h2>Opções</h2>
+        <button id="btn-ponto-dia-passado">Ponto Dia Passado</button>
+        <button id="btn-relatorio-marcacoes">Relatório de Marcações</button>
+        <button class="fechar-modal" id="btn-fechar-opcoes">X</button>
+    </dialog>
+
+    <dialog id="dialog-ponto-dia-passado">
+        <h2>Registrar Ponto Dia Passado</h2>
+        <p>Data: <input type="date" id="input-data-dia-passado"></p>
+        <p>Hora: <input type="time" id="input-hora-dia-passado"></p>
+        <p>Tipo de Ponto:
+            <select id="select-tipo-dia-passado">
+                <option value="Entrada">Entrada</option>
+                <option value="Intervalo">Intervalo</option>
+                <option value="Volta-Intervalo">Volta Intervalo</option>
+                <option value="Saida">Saída</option>
+            </select>
+        </p>
+        <p>Justificativa: <textarea id="input-justificativa-dia-passado"></textarea></p>
+        <p>Upload de Arquivo: <input type="file" id="input-upload-dia-passado"></p>
+        <button id="btn-confirmar-dia-passado">Confirmar</button>
+        <button class="fechar-modal" id="btn-fechar-dia-passado">X</button>
+    </dialog>
+
     <div class="hidden" id="div-alerta">
         <button class="fechar-div-alerta" id="btn-fechar-div-alerta">x</button>
         <p>Ponto Registrado com sucesso!</p>
     </div>
 
+
+    <dialog id="dialog-relatorio-marcacoes">
+        <h2>Relatório de Marcações</h2>
+        <button id="btn-ver-relatorio">Ver Relatório</button>
+        <button class="fechar-modal" id="btn-fechar-relatorio">X</button>
+    </dialog>
+
+    
     <script src="js/dataHora.js"></script>
     <script src="js/index.js"></script>
 </body>
