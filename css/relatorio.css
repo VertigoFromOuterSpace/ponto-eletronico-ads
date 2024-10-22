@@ -1,8 +1,8 @@
 body {
     background-image: url(../relaBackground.jpg);
     background-repeat: no-repeat;
-    background-position: center center; /* Centraliza a imagem */
-    background-size: cover; /* Ajusta o tamanho para cobrir a tela sem distorcer */
+    background-position: center center;
+    background-size: cover;
     background-attachment: fixed;
     text-align: center;
     color: #5a363a;

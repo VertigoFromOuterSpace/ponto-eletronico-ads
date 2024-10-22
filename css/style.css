@@ -174,11 +174,10 @@ a{
     background-color: white;
     border: 1px solid #ccc;
     padding: 5px;
-    /* Remover display: none aqui */
 }
 
 .menu-opcoes.hidden {
-    display: none; /* Controlar visibilidade apenas com essa classe */
+    display: none;
 }
 
 .menu-opcoes button {

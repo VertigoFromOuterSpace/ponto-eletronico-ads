@@ -1,3 +1,6 @@
+const btnFecharEditar = document.getElementById("btn-fechar-editar");
+const btnConfirmarEdicao = document.getElementById("btn-confirmar-edicao");
+const btnFiltro = document.getElementById("btn-filtrar");
 let pontoEmEdicao = null;
 
 // Exibir o relatório completo ao carregar a página
@@ -41,7 +44,7 @@ function abrirModalEdicao(index) {
 }
 
 // Função para salvar a edição
-document.getElementById("btn-confirmar-edicao").addEventListener("click", () => {
+btnConfirmarEdicao.addEventListener("click", () => {
     let registros = JSON.parse(localStorage.getItem("registros")) || [];
 
     // Atualizar o ponto em edição com os novos valores do modal
@@ -61,12 +64,12 @@ document.getElementById("btn-confirmar-edicao").addEventListener("click", () => 
 });
 
 // Fechar o modal de edição
-document.getElementById("btn-fechar-editar").addEventListener("click", () => {
+btnFecharEditar.addEventListener("click", () => {
     document.getElementById("dialog-editar-ponto").close();
 });
 
 // Função de filtro por período
-document.getElementById("btn-filtrar").addEventListener("click", () => {
+btnFiltro.addEventListener("click", () => {
     let inicio = new Date(document.getElementById("filtro-inicio").value);
     let fim = new Date(document.getElementById("filtro-fim").value);
     let registros = JSON.parse(localStorage.getItem("registros")) || [];

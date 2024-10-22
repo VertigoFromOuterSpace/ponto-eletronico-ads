@@ -1,7 +1,5 @@
-//TO-DO
-//Organizar código
-// ajeitar o div da confirmacao e fazê-lo aparecer
-// garantir que o código persista para mostrar o histórico
+// TODO
+// Comentar melhor o código
 
 const btnFecharModal = document.getElementById("btn-fechar-dialog"); // constante do botão de fechar o modal
 const btnRegistrarPonto = document.getElementById("btn-registrar-ponto"); // constante do botão de abrir o modal
@@ -20,6 +18,8 @@ const btbConfirmarPontoPassado = document.getElementById("btn-confirmar-dia-pass
 const btnRelatorioMarcacoes = document.getElementById("btn-relatorio-marcacoes");
 const fecharRelatorioMarcacoes = document.getElementById("btn-fechar-relatorio");
 const visualizarRelatorio = document.getElementById("btn-ver-relatorio");
+const btnDialogRegistrarPonto = document.getElementById("btn-dialog-registrar-ponto");
+const btnConfirmarEdicao = document.getElementById("btn-confirmar-edicao");
 
 let proxPonto = {
     "Entrada":"Intervalo",
@@ -53,8 +53,6 @@ btnFecharModal.addEventListener("click", function() { // ler o botão para fecha
     dialogPonto.close();
 });
 
-
-const btnDialogRegistrarPonto = document.getElementById("btn-dialog-registrar-ponto");
 btnDialogRegistrarPonto.addEventListener("click", () => {
 
     let data = dataCompleta();
@@ -108,7 +106,7 @@ function abrirModalEdicao(index) {
 }
 
 // Função para salvar as alterações feitas no ponto
-document.getElementById("btn-confirmar-edicao").addEventListener("click", () => {
+btnConfirmarEdicao.addEventListener("click", () => {
     let registros = JSON.parse(localStorage.getItem("registros"));
 
     // Atualizar o ponto em edição com os novos valores
